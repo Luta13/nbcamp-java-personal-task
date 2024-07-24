@@ -1,5 +1,6 @@
 package calculator;
 
+import java.text.NumberFormat;
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -37,25 +38,29 @@ public class App {
                     case "+":
                         tempResult = num1 + num2;
                         resultList.add(tempResult);
-                        System.out.println("결과: " + tempResult);
+                        System.out.println("결과: " + NumberFormat.getInstance().format(tempResult));
+
                         break;
 
                     case "-":
                         tempResult = num1 - num2;
                         resultList.add(tempResult);
-                        System.out.println("결과: " + tempResult);
+                        System.out.println("결과: " + NumberFormat.getInstance().format(tempResult));
+
                         break;
 
                     case "*":
                         tempResult = num1 * num2;
                         resultList.add(tempResult);
-                        System.out.println("결과: " + tempResult);
+                        System.out.println("결과: " + NumberFormat.getInstance().format(tempResult));
+
                         break;
 
                     case "/":
                         tempResult = num1 / num2;
                         resultList.add(tempResult);
-                        System.out.println("결과: " + tempResult);
+                        System.out.println("결과: " + NumberFormat.getInstance().format(tempResult));
+
                         break;
 
 
@@ -68,7 +73,7 @@ public class App {
             while (!(operator.equals("+") || operator.equals("-") || operator.equals("*") || operator.equals("/")));
 
 
-            System.out.println("가장 먼저 저장된 연산 결과를 삭제하시겠습니까? (remove 입력시 삭제");
+            System.out.println("가장 먼저 저장된 연산 결과를 삭제하시겠습니까? (remove 입력시 삭제)");
             input = sc.next();
             if(input.equals("remove"))
             {
@@ -88,7 +93,7 @@ public class App {
                 {
                     for(Long i : resultList)
                     {
-                        System.out.print(i + " ");
+                        System.out.print(NumberFormat.getInstance().format(i) + " ");
                     }
                     System.out.println();
                 }
