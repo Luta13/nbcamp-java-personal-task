@@ -18,10 +18,11 @@ public class App {
             } else
                 break;
         }
-        while(true) {
+        char operator = ' ';
+        do {
             System.out.print("사칙연산 기호를 입력하세요: ");
             // 사칙연산 기호를 적합한 타입으로 선언한 변수에 저장합니다.
-            char operator = sc.next().charAt(0);
+            operator = sc.next().charAt(0);
             int result = 0;
             switch (operator) {
                 case '+':
@@ -46,6 +47,8 @@ public class App {
 
             }
         }
+        while(!(operator == '+' || operator == '-' || operator == '*' || operator == '/'));
+
 
 
     }
