@@ -14,6 +14,7 @@ public class App {
         int count = 0;
         String operator = "";
         String input = "";
+        Calculator calculator = new Calculator();
 
 
  program:   while (true) {
@@ -25,61 +26,63 @@ public class App {
                 num2 = sc.nextLong();
 
 
-                if (num1 <= 0 || num2 <= 0) {
+                if (num1 < 0 || num2 < 0) {
                     System.out.println("입력하신 두 수중 양의 정수가 아닌 수가 있습니다. 다시 입력해주세요.");
                 } else
                     break;
             }
             System.out.print("사칙연산 기호를 입력하세요: ");
-            do {
-                // 사칙연산 기호를 적합한 타입으로 선언한 변수에 저장합니다.
-                operator = sc.next();
-                switch (operator) {
-                    case "+":
-                        tempResult = num1 + num2;
-                        resultList.add(tempResult);
-                        System.out.println("결과: " + NumberFormat.getInstance().format(tempResult));
-
-                        break;
-
-                    case "-":
-                        tempResult = num1 - num2;
-                        resultList.add(tempResult);
-                        System.out.println("결과: " + NumberFormat.getInstance().format(tempResult));
-
-                        break;
-
-                    case "*":
-                        tempResult = num1 * num2;
-                        resultList.add(tempResult);
-                        System.out.println("결과: " + NumberFormat.getInstance().format(tempResult));
-
-                        break;
-
-                    case "/":
-                        tempResult = num1 / num2;
-                        resultList.add(tempResult);
-                        System.out.println("결과: " + NumberFormat.getInstance().format(tempResult));
-
-                        break;
-
-
-                    default:
-                        System.out.println("잘못된 기호를 입력하셨습니다. 다시 입력해주세요.");
-                        break;
-
-                }
-            }
-            while (!(operator.equals("+") || operator.equals("-") || operator.equals("*") || operator.equals("/")));
-
+//            do {
+//                // 사칙연산 기호를 적합한 타입으로 선언한 변수에 저장합니다.
+//                operator = sc.next();
+//                switch (operator) {
+//                    case "+":
+//                        tempResult = num1 + num2;
+//                        resultList.add(tempResult);
+//                        System.out.println("결과: " + NumberFormat.getInstance().format(tempResult));
+//
+//                        break;
+//
+//                    case "-":
+//                        tempResult = num1 - num2;
+//                        resultList.add(tempResult);
+//                        System.out.println("결과: " + NumberFormat.getInstance().format(tempResult));
+//
+//                        break;
+//
+//                    case "*":
+//                        tempResult = num1 * num2;
+//                        resultList.add(tempResult);
+//                        System.out.println("결과: " + NumberFormat.getInstance().format(tempResult));
+//
+//                        break;
+//
+//                    case "/":
+//                        tempResult = num1 / num2;
+//                        resultList.add(tempResult);
+//                        System.out.println("결과: " + NumberFormat.getInstance().format(tempResult));
+//
+//                        break;
+//
+//
+//                    default:
+//                        System.out.println("잘못된 기호를 입력하셨습니다. 다시 입력해주세요.");
+//                        break;
+//
+//                }
+//            }
+//            while (!(operator.equals("+") || operator.equals("-") || operator.equals("*") || operator.equals("/")));
+            operator = sc.next();
+            calculator.calculate(num1, num2, operator);
 
             System.out.println("가장 먼저 저장된 연산 결과를 삭제하시겠습니까? (remove 입력시 삭제)");
             input = sc.next();
             if(input.equals("remove"))
             {
-                resultList.remove(0);
+                calculator.removeFirst();
             }
             else System.out.println("삭제하지 않습니다.");
+
 
 
             System.out.println("저장된 연산결과를 조회하시겠습니까? (inquiry 입력 시 조회");
@@ -87,7 +90,7 @@ public class App {
             if(input.equals("inquiry"))
             {   if(resultList.isEmpty())
                 {
-                    System.out.println("연산결과가 비어있습니다.");
+                    System.out.println("조회된 데이터가 없습니다.");
                 }
                 else
                 {
