@@ -5,9 +5,12 @@ import java.util.ArrayList;
 public class Calculator {
     private ArrayList<Long> resultList;
     long result = 0;
+    double circleArea;
+    ArrayList<Double> circleAreaList;
     public Calculator()
     {
         resultList = new ArrayList<Long>();
+        circleAreaList = new ArrayList<Double>();
     }
 
     void setResultList(ArrayList<Long> resultList)
@@ -18,6 +21,7 @@ public class Calculator {
     {
         return resultList;
     }
+
     void removeResult()
     {
         if(resultList.isEmpty()) {
@@ -40,7 +44,33 @@ public class Calculator {
         }
         System.out.println();
     }
+    public double calculateCircleArea(final int radius) {
+        //final int radius를 쓴 이유는 radius는 반지름이라 절대 바뀌면 안되는 상수이다.
+        circleArea = radius * radius * 3.14f;
 
+        return circleArea;
+
+    }
+    public void saveCircleAreaList(double circleArea)
+    {
+        circleAreaList.add(circleArea);
+        return;
+    }
+
+    public double getCircleArea() {
+        return circleArea;
+    }
+    public void setCircleArea(double circleArea) {
+        this.circleArea = circleArea;
+    }
+    public void inquiryCircleAreaList()
+    {
+        for(double d : circleAreaList)
+        {
+            System.out.print(d + " ");
+        }
+        System.out.println();
+    }
 
     public Long calculate(Long a, Long b, String operator)
     {
