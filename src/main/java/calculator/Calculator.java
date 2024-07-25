@@ -21,7 +21,21 @@ public class Calculator {
             return;
         }
 
-        this.resultList.remove(0);
+        resultList.remove(0);
+    }
+    void checkResultList()
+    {
+        if(resultList.isEmpty())
+        {
+            System.out.println("조회된 데이터가 없습니다.");
+            return;
+        }
+
+        for(Long l : resultList)
+        {
+            System.out.print(NumberFormat.getInstance().format(l) + " ");
+        }
+        System.out.println();
     }
 
 

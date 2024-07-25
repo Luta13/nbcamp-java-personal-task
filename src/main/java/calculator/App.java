@@ -88,19 +88,8 @@ public class App {
             System.out.println("저장된 연산결과를 조회하시겠습니까? (inquiry 입력 시 조회");
             input = sc.next();
             if(input.equals("inquiry"))
-            {   if(resultList.isEmpty())
-                {
-                    System.out.println("조회된 데이터가 없습니다.");
-                }
-                else
-                {
-                    for(Long i : resultList)
-                    {
-                        System.out.print(NumberFormat.getInstance().format(i) + " ");
-                    }
-                    System.out.println();
-                }
-
+            {
+                calculator.checkResultList();
             }
             else System.out.println("조회하지 않습니다.");
 
