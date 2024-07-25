@@ -79,7 +79,7 @@ public class App {
             input = sc.next();
             if(input.equals("remove"))
             {
-                calculator.removeFirst();
+                calculator.removeResult();
             }
             else System.out.println("삭제하지 않습니다.");
 
@@ -89,7 +89,7 @@ public class App {
             input = sc.next();
             if(input.equals("inquiry"))
             {
-                calculator.checkResultList();
+                calculator.inquiryResults();
             }
             else System.out.println("조회하지 않습니다.");
 

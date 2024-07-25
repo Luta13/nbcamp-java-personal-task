@@ -3,8 +3,12 @@ import java.text.NumberFormat;
 import java.util.ArrayList;
 
 public class Calculator {
-    private ArrayList<Long> resultList = new ArrayList<Long>();
+    private ArrayList<Long> resultList;
     long result = 0;
+    public Calculator()
+    {
+        resultList = new ArrayList<Long>();
+    }
 
     void setResultList(ArrayList<Long> resultList)
     {
@@ -14,16 +18,15 @@ public class Calculator {
     {
         return resultList;
     }
-    void removeFirst()
+    void removeResult()
     {
         if(resultList.isEmpty()) {
             System.out.println("조회된 데이터가 없습니다.");
             return;
         }
-
         resultList.remove(0);
     }
-    void checkResultList()
+    void inquiryResults()
     {
         if(resultList.isEmpty())
         {
