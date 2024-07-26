@@ -5,11 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="cbccc591-8f54-46e0-b8bf-1c0192b1eef2" name="Changes" comment="init commit">
-      <change afterPath="$PROJECT_DIR$/src/main/java/calculator/ArithmeticCalculator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/calculator/CircleCalculator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/calculator/ModOperator.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/calculator/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/calculator/App.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/calculator/Calculator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/calculator/Calculator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/calculator/AddOperator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/calculator/AddOperator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/calculator/ArithmeticCalculator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/calculator/ArithmeticCalculator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/calculator/DivideOperator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/calculator/DivideOperator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/calculator/MultiplyOperator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/calculator/MultiplyOperator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/calculator/SubtractOperator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/calculator/SubtractOperator.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -92,7 +94,7 @@
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Project",
+    "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2",
     "settings.editor.selected.configurable": "reference.settingsdialog.project.gradle",
@@ -146,7 +148,7 @@
       <workItem from="1721916318517" duration="30000" />
       <workItem from="1721917232998" duration="732000" />
       <workItem from="1721952432101" duration="2214000" />
-      <workItem from="1721982256334" duration="3245000" />
+      <workItem from="1721982256334" duration="9510000" />
     </task>
     <task id="LOCAL-00001" summary="init commit">
       <option name="closed" value="true" />

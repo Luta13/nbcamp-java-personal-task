@@ -4,6 +4,8 @@ import java.text.NumberFormat;
 import java.util.ArrayList;
 
 public class ArithmeticCalculator extends Calculator {
+
+
     public ArithmeticCalculator() {
         resultList = new ArrayList<Double>();
     }
