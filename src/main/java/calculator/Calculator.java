@@ -3,76 +3,45 @@ import java.text.NumberFormat;
 import java.util.ArrayList;
 
 public class Calculator {
-    private ArrayList<Long> resultList;
-    long result = 0;
-    double circleArea;
-    ArrayList<Double> circleAreaList;
-    public Calculator()
-    {
-        resultList = new ArrayList<Long>();
-        circleAreaList = new ArrayList<Double>();
-    }
 
-    void setResultList(ArrayList<Long> resultList)
+
+
+
+    double result = 0;
+    public ArrayList<Double> resultList;
+
+    public void setResultList(ArrayList<Double> resultList)
     {
         this.resultList = resultList;
     }
-    ArrayList<Long> getResultList()
+    public ArrayList<Double> getResultList()
     {
         return resultList;
     }
-
     void removeResult()
     {
-        if(resultList.isEmpty()) {
-            System.out.println("조회된 데이터가 없습니다.");
-            return;
-        }
+        resultEmpty();
         resultList.remove(0);
+        System.out.println("삭제가 완료되었습니다.");
     }
-    void inquiryResults()
+    void resultEmpty()
     {
         if(resultList.isEmpty())
         {
             System.out.println("조회된 데이터가 없습니다.");
             return;
         }
-
-        for(Long l : resultList)
-        {
-            System.out.print(NumberFormat.getInstance().format(l) + " ");
-        }
-        System.out.println();
     }
-    public double calculateCircleArea(final int radius) {
-        //final int radius를 쓴 이유는 radius는 반지름이라 절대 바뀌면 안되는 상수이다.
-        circleArea = radius * radius * 3.14f;
-
-        return circleArea;
-
-    }
-    public void saveCircleAreaList(double circleArea)
+    void inquiryResults()
     {
-        circleAreaList.add(circleArea);
-        return;
-    }
-
-    public double getCircleArea() {
-        return circleArea;
-    }
-    public void setCircleArea(double circleArea) {
-        this.circleArea = circleArea;
-    }
-    public void inquiryCircleAreaList()
-    {
-        for(double d : circleAreaList)
+        resultEmpty();
+        for(Double d : resultList)
         {
             System.out.print(d + " ");
         }
         System.out.println();
     }
-
-    public Long calculate(Long a, Long b, String operator)
+    public void validate(int a, int b, String operator)
     {
         try {
             if (a < 0 || b < 0) {
@@ -86,38 +55,28 @@ public class Calculator {
         {
             e.printStackTrace();
             System.out.println("Exception: " + e.getMessage());
-            return 0L;
         }
-        switch (operator) {
-            case "+":
-                result = a + b;
-                resultList.add(result);
-                System.out.println("결과: " + NumberFormat.getInstance().format(result));
-                break;
-
-            case "-":
-                result = a - b;
-                resultList.add(result);
-                System.out.println("결과: " + NumberFormat.getInstance().format(result));
-                break;
-
-            case "*":
-                result = a * b;
-                resultList.add(result);
-                System.out.println("결과: " + NumberFormat.getInstance().format(result));
-                break;
-
-            case "/":
-                result = a / b;
-                resultList.add(result);
-                System.out.println("결과: " + NumberFormat.getInstance().format(result));
-                break;
-        }
-        return result;
+    }
+    public void saveResult(double result)
+    {
+        resultList.add(result);
+    }
+    public double calculate(int a, int b, String operator)
+    {
+        return 0;
+    }
+    public double calculate(int radius)
+    {
+        return 0;
     }
 
 
 
 
+
+
+
+
 }
+
 
